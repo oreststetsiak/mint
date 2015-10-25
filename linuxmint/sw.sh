@@ -33,6 +33,7 @@ sudo apt-get update
 sudo apt-get install -y \
 sublime-text-installer \
 cherrytree \
+python-gpgme \
 haguichi \
 haguichi-appindicator \
 skippy-xd \
