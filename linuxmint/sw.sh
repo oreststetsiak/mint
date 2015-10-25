@@ -54,7 +54,6 @@ chromium-browser \
 midori \
 thunderbird \
 pidgin \
-nslookup \
 shutter \
 htop \
 filezilla \
