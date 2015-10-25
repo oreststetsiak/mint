@@ -24,8 +24,12 @@ sudo chown root:root /etc/sudoers.d/$usrnm
 sudo chmod 0440 /etc/sudoers.d/$usrnm
 sudo more /etc/sudoers.d/$usrnm
 
+# fix linux mint no support for locale en_us utf8
+sudo locale-gen --purge --no-archive
+
 
 # soft
+sudo apt-get update
 sudo apt-get install -y \
 sublime-text-installer \
 cherrytree \
