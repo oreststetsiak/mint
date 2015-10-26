@@ -91,5 +91,7 @@ skype > /dev/null 2>&1
 echo -e "INFO: Updating && upgrading"
 sudo apt-get update > /dev/null 2>&1 && sudo apt-get -y upgrade > /dev/null 2>&1
 
-echo -e "INFO: Succeed!"
+echo -e "INFO: Configuring terminal!"
+cat term > ~/.config/xfce4/terminal/terminalrc > /dev/null 2>&1
+
 
