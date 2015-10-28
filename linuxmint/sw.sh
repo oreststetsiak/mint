@@ -34,7 +34,7 @@ sudo locale-gen --purge --no-archive > /dev/null 2>&1
 
 echo -e "INFO: Installing software ..."
 # soft
-sudo apt-get update
+sudo apt-get update > /dev/null 2>&1
 sudo apt-get install -y \
 sublime-text-installer \
 cherrytree \
