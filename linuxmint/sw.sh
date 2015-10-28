@@ -92,10 +92,17 @@ echo -e "INFO: Updating && upgrading"
 sudo apt-get update > /dev/null 2>&1 && sudo apt-get -y upgrade > /dev/null 2>&1
 
 echo -e "INFO: Configuring terminal!"
+
+
+ls ~/.config/xfce4/terminal > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    mkdir -p ~/.config/xfce4/terminal
+fi
 cat term > ~/.config/xfce4/terminal/terminalrc > /dev/null 2>&1
 
-echo -e "INFO: Configuring sublime!"
 
+
+echo -e "INFO: Configuring sublime!"
 ls ~/.config/sublime-text-3/Packages/User/ > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     mkdir -p ~/.config/sublime-text-3/Packages/User/
