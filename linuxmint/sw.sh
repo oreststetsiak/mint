@@ -96,7 +96,7 @@ echo -e "INFO: Configuring terminal!"
 
 ls ~/.config/xfce4/terminal > /dev/null 2>&1
 if [ $? -ne 0 ]; then
-    mkdir -p ~/.config/xfce4/terminal
+    mkdir -R ~/.config/xfce4/terminal
 fi
 cat term > ~/.config/xfce4/terminal/terminalrc > /dev/null 2>&1
 
@@ -105,7 +105,7 @@ cat term > ~/.config/xfce4/terminal/terminalrc > /dev/null 2>&1
 echo -e "INFO: Configuring sublime!"
 ls ~/.config/sublime-text-3/Packages/User/ > /dev/null 2>&1
 if [ $? -ne 0 ]; then
-    mkdir -p ~/.config/sublime-text-3/Packages/User/
+    mkdir -R ~/.config/sublime-text-3/Packages/User/
 fi
 
 cat sublime.conf > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings > /dev/null 2>&1
