@@ -3,7 +3,6 @@
 
 echo -e "INFO: Adding PPAs"
 
-sudo apt-get install python-software-properties > /dev/null 2>&1
 # PPAs
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3 > /dev/null 2>&1
 sudo add-apt-repository -y ppa:vincent-c/cherrytree > /dev/null 2>&1
@@ -96,19 +95,20 @@ echo -e "INFO: Configuring terminal!"
 
 ls ~/.config/xfce4/terminal > /dev/null 2>&1
 if [ $? -ne 0 ]; then
-    mkdir -R ~/.config/xfce4/terminal
+    mkdir -p ~/.config/xfce4/terminal
 fi
-cat term > ~/.config/xfce4/terminal/terminalrc > /dev/null 2>&1
+cat term > ~/.config/xfce4/terminal/terminalrc
 
 
 
 echo -e "INFO: Configuring sublime!"
 ls ~/.config/sublime-text-3/Packages/User/ > /dev/null 2>&1
 if [ $? -ne 0 ]; then
-    mkdir -R ~/.config/sublime-text-3/Packages/User/
+    mkdir -p ~/.config/sublime-text-3/Packages/User/
 fi
 
-cat sublime.conf > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings > /dev/null 2>&1
+cat sl_usr.conf > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+cat sl_pkgs.conf > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
 
 
 echo -e "INFO: Scseed!"
