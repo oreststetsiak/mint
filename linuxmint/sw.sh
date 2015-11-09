@@ -37,62 +37,61 @@ sudo apt-get update > /dev/null 2>&1
 sudo apt-get install -y \
 sublime-text-installer \
 cherrytree \
-python-gpgme \
+chromium-browser \
+clipit \
+curl \
+dropbox \
+faience-icon-theme \
+firefox \
+git \
+gitg \
+goldendict \
 haguichi \
 haguichi-appindicator \
-skippy-xd \
-numix-gtk-theme \
-numix-bluish-theme \
-faience-icon-theme \
-numix-icon-theme-circle \
-paper-gtk-theme \
-paper-icon-theme \
-git \
-curl \
-wget \
-firefox \
+htop \
 ike \
 ike-qtgui \
-dropbox \
-clipit \
-chromium-browser \
-midori \
-thunderbird \
-pidgin \
-shutter \
-htop \
-filezilla \
-virtualbox-nonfree \
-openssh-server \
-umit \
-goldendict \
-anki \
-tree \
 inkscape \
-gitg \
-keepassx \
-rdesktop \
-wireshark \
 ipython \
-remmina \
-remmina-plugin-vnc \
-remmina-plugin-rdp \
-remmina-common \
+keepassx \
+libreoffice \
+meld \
+midori \
 mysql-workbench \
+numix-bluish-theme \
+numix-gtk-theme \
+numix-icon-theme-circle \
+openssh-server \
+paper-gtk-theme \
+paper-icon-theme \
+pidgin \
+python-gpgme \
+rdesktop \
+remmina \
+remmina-common \
+remmina-plugin-rdp \
+remmina-plugin-vnc \
+shutter \
+skippy-xd \
+skype \
+thunderbird \
+tree \
+virtualbox-nonfree \
+wget \
 wine \
 winetricks \
-nagstamon \
-meld \
-libreoffice \
-skype > /dev/null 2>&1
+wireshark > /dev/null 2>&1
 
 
 echo -e "INFO: Updating && upgrading"
 sudo apt-get update > /dev/null 2>&1 && sudo apt-get -y upgrade > /dev/null 2>&1
 
+# bashrc
+rm -rf ~/.bashrc
+cp .bashrc ~/ 
+
+
 echo -e "INFO: Configuring terminal!"
-
-
 ls ~/.config/xfce4/terminal > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     mkdir -p ~/.config/xfce4/terminal
@@ -111,4 +110,9 @@ cat sl_usr.conf > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-set
 cat sl_pkgs.conf > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
 
 
-echo -e "INFO: Scseed!"
+# goldendict
+echo -e "INFO: Configuring goldendict!"
+rm -rf ~/.goldendict
+cp -rf .goldendict ~/
+
+echo -e "INFO: Succeed!"
