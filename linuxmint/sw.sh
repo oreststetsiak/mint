@@ -46,6 +46,7 @@ firefox \
 git \
 gitg \
 goldendict \
+gnupg2 \
 haguichi \
 haguichi-appindicator \
 htop \
