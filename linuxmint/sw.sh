@@ -93,7 +93,7 @@ cp .bashrc ~/
 
 echo -e "INFO: Configuring terminal!"
 ls ~/.config/xfce4/terminal > /dev/null 2>&1
-if [ $? -ne 0 ]; then
+if [ $? -ne 0 ]; thunderbird
     mkdir -p ~/.config/xfce4/terminal
 fi
 cat term > ~/.config/xfce4/terminal/terminalrc
