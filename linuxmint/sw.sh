@@ -1,13 +1,10 @@
 #!/bin/bash
 
-
 echo -e "INFO: Adding PPAs"
 
 # PPAs
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3 > /dev/null 2>&1
 sudo add-apt-repository -y ppa:vincent-c/cherrytree > /dev/null 2>&1
-sudo add-apt-repository -y ppa:webupd8team/haguichi > /dev/null 2>&1
-sudo add-apt-repository -y ppa:landronimirc/skippy-xd-daily > /dev/null 2>&1
 sudo add-apt-repository -y ppa:numix/ppa > /dev/null 2>&1
 sudo add-apt-repository -y ppa:noobslab/themes > /dev/null 2>&1
 sudo add-apt-repository -y ppa:noobslab/icons > /dev/null 2>&1
@@ -18,7 +15,7 @@ sleep 5
 
 echo -e "INFO: Making sudo"
 
-# sudo 
+# granting sudo
 usrnm=`whoami` > /dev/null 2>&1
 sudo touch /etc/sudoers.d/$usrnm > /dev/null 2>&1
 sudo chown $usrnm:$usrnm /etc/sudoers.d/$usrnm > /dev/null 2>&1
@@ -28,11 +25,10 @@ sudo chmod 0440 /etc/sudoers.d/$usrnm > /dev/null 2>&1
 sudo more /etc/sudoers.d/$usrnm > /dev/null 2>&1
 
 echo -e "INFO: Fixing supporting for locale en_us utf8"
-# fix linux mint no support for locale en_us utf8
 sudo locale-gen --purge --no-archive > /dev/null 2>&1
 
 echo -e "INFO: Installing software ..."
-# soft
+
 sudo apt-get update > /dev/null 2>&1
 sudo apt-get install -y \
 sublime-text-installer \
@@ -47,17 +43,12 @@ git \
 gitg \
 goldendict \
 gnupg2 \
-haguichi \
-haguichi-appindicator \
 htop \
-ike \
-ike-qtgui \
 inkscape \
 ipython \
 keepassx \
 libreoffice \
 meld \
-midori \
 mysql-workbench \
 numix-bluish-theme \
 numix-gtk-theme \
@@ -65,19 +56,12 @@ numix-icon-theme-circle \
 openssh-server \
 paper-gtk-theme \
 paper-icon-theme \
-pidgin \
 python-gpgme \
 rdesktop \
-remmina \
-remmina-common \
-remmina-plugin-rdp \
-remmina-plugin-vnc \
 shutter \
-skippy-xd \
 skype \
 thunderbird \
 tree \
-virtualbox-nonfree \
 wget \
 wine \
 winetricks \
@@ -94,11 +78,10 @@ cp .bashrc ~/
 
 echo -e "INFO: Configuring terminal!"
 ls ~/.config/xfce4/terminal > /dev/null 2>&1
-if [ $? -ne 0 ]; thunderbird
+if [ $? -ne 0 ]; then
     mkdir -p ~/.config/xfce4/terminal
 fi
 cat term > ~/.config/xfce4/terminal/terminalrc
-
 
 
 echo -e "INFO: Configuring sublime!"
