@@ -2,6 +2,13 @@
 
 echo -e "INFO: Adding PPAs"
 
+#qemu-system
+#qemu-utils
+#libvirt-bin
+#virt-manager
+#python-spice-client-gtk
+#virt-viewer
+
 # PPAs
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3 > /dev/null 2>&1
 sudo add-apt-repository -y ppa:vincent-c/cherrytree > /dev/null 2>&1
