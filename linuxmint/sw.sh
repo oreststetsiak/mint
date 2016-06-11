@@ -10,6 +10,7 @@ sudo add-apt-repository -y ppa:noobslab/themes > /dev/null 2>&1
 sudo add-apt-repository -y ppa:noobslab/icons > /dev/null 2>&1
 sudo add-apt-repository -y ppa:numix/ppa > /dev/null 2>&1
 sudo add-apt-repository -y ppa:snwh/pulp > /dev/null 2>&1
+sudo add-apt-repository -y ppa:eugenesan/ppa > /dev/null 2>&1
 
 sleep 5
 
@@ -17,12 +18,9 @@ echo -e "INFO: Making sudo"
 
 # granting sudo
 usrnm=`whoami` > /dev/null 2>&1
-sudo touch /etc/sudoers.d/$usrnm > /dev/null 2>&1
-sudo chown $usrnm:$usrnm /etc/sudoers.d/$usrnm > /dev/null 2>&1
-sudo echo "$usrnm ALL = NOPASSWD: ALL" > /etc/sudoers.d/$usrnm > /dev/null 2>&1
-sudo chown root:root /etc/sudoers.d/$usrnm > /dev/null 2>&1
-sudo chmod 0440 /etc/sudoers.d/$usrnm > /dev/null 2>&1
-sudo more /etc/sudoers.d/$usrnm > /dev/null 2>&1
+echo "$usrnm ALL = NOPASSWD: ALL"
+echo "chown root:root /etc/sudoers.d/$usrnm"
+echo "chmod 0440 /etc/sudoers.d/$usrnm"
 
 echo -e "INFO: Fixing supporting for locale en_us utf8"
 sudo locale-gen --purge --no-archive > /dev/null 2>&1

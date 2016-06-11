@@ -1,5 +1,5 @@
 [Configuration]
-ColorForeground=#2929a1a19898
+ColorForeground=#4b4ba3a3c9c9
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBordersDefault=TRUE
@@ -17,5 +17,5 @@ MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 MiscScrollAlternateScreen=TRUE
-ColorBackground=#00002a2a3535
+ColorBackground=#00002b2b3636
 FontName=Ubuntu Mono 13
