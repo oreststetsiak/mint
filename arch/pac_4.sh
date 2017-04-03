@@ -18,6 +18,7 @@ systemctl enable gdm
 pacman -Syu --noconfirm
 pacman -S \
 atom \
+arc-icon-theme \
 cherrytree \
 chromium \
 curl \
