@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo "command 'wifi-menu' in case of wifi"
+genfstab -U /mnt >> /mnt/etc/fstab
+umount /mnt
+
+reboot
