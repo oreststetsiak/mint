@@ -2,6 +2,9 @@
 
 useradd -m -g users -s /bin/bash oreststetsiak
 passwd oreststetsiak
+echo "alias ls='ls --color=auto'"  >> /home/oreststetsiak/.bashrc
+echo "alias ll='ls -alF'" >> /home/oreststetsiak/.bashrc
+echo "alias grep='grep --color=auto'" >> /home/oreststetsiak/.bashrc
 
 echo "oreststetsiak ALL=(ALL) ALL" >> /etc/sudoers
 
@@ -13,30 +16,42 @@ pacman -S cinnamon nemo-fileroller --noconfirm
 systemctl enable gdm
 
 pacman -Syu --noconfirm
-
 pacman -S \
-firefox \
-lxterminal \
-cherrytree \
-dbus \
 atom \
+cherrytree \
 chromium \
 curl \
+dbus \
+deepin-image-viewer \
+deluge \
+dialog \
 faience-icon-theme \
+ffmpeg \
 firefox \
+firefox \
+gnome-screenshot \
 htop \
-parcellite \
+ifplugd \
 inkscape \
 ipython \
-openvpn \
-keepassx \
+keepassx2 \
 libreoffice-fresh \
 meld \
 mysql-workbench \
+network-manager-applet \
 numix-gtk-theme \
 openssh \
+openvpn \
+parcellite \
+qterminal \
+rdesktop \
 thunderbird \
 tree \
+unzip \
+vlc \
 wget \
-rdesktop \
+wpa_actiond \
+wpa_supplicant \
+xf86-input-synaptics \
+xfce4-appfinder \
 --noconfirm

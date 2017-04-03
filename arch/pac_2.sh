@@ -6,10 +6,11 @@ mount /dev/sda1 /mnt
 echo "command 'wifi-menu' in case of wifi"
 
 pacstrap /mnt base base-devel
-
 arch-chroot /mnt
 
+systemctl enable dhcpcd
 systemctl enable dhcpcd@enp5s0.service
+
 
 echo "set password for 'root' user"
 passwd
@@ -19,6 +20,8 @@ hwclock --systohc
 
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "en_US ISO-8859-1" >> /etc/locale.gen
+echo "ru_UA.UTF-8 UTF-8" >> /etc/locale.gen
+echo "ru_UA KOI8-U" >> /etc/locale.gen
 locale-gen
 
 ln -sf /usr/share/zoneinfo/Europe/Kiev /etc/localtime
