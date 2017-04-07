@@ -1,19 +1,16 @@
 #!/bin/bash
 
-RED='\033[0;31m'
-NC='\033[0m' # No Color
-
-echo -e "${RED}enter normal username${NC}"
+echo "enter normal username"
 read  MY_USERNAME
 
 useradd -m -g users -s /bin/bash ${MY_USERNAME}
 passwd ${MY_USERNAME}
 
-echo "alias ls='ls --color=auto'"  >> /home/oreststetsiak/.bashrc
-echo "alias ll='ls -alF'" >> /home/oreststetsiak/.bashrc
-echo "alias grep='grep --color=auto'" >> /home/oreststetsiak/.bashrc
+echo "alias ls='ls --color=auto'"  >> /home/${MY_USERNAME}/.bashrc
+echo "alias ll='ls -alF'" >> /home/${MY_USERNAME}/.bashrc
+echo "alias grep='grep --color=auto'" >> /home/${MY_USERNAME}/.bashrc
 
-echo "oreststetsiak ALL=(ALL) ALL" >> /etc/sudoers
+echo "${MY_USERNAME} ALL=(ALL) ALL" >> /etc/sudoers
 
 pacman -S xorg-server xorg-server-utils xorg-xinit --noconfirm
 pacman -S xf86-video-intel --noconfirm
@@ -26,8 +23,8 @@ systemctl enable gdm
 
 pacman -Syu --noconfirm
 pacman -S \
-atom \
 arc-icon-theme \
+atom \
 cherrytree \
 chromium \
 curl \
@@ -38,6 +35,7 @@ dialog \
 faience-icon-theme \
 ffmpeg \
 firefox \
+git \
 gnome-screenshot \
 htop \
 ifplugd \
@@ -61,4 +59,6 @@ wget \
 wpa_actiond \
 wpa_supplicant \
 xf86-input-synaptics \
+xfce4-appfinder \
+xfce4-terminal \
 --noconfirm
