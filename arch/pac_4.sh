@@ -1,7 +1,14 @@
 #!/bin/bash
 
-useradd -m -g users -s /bin/bash oreststetsiak
-passwd oreststetsiak
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+echo -e "${RED}enter normal username${NC}"
+read  MY_USERNAME
+
+useradd -m -g users -s /bin/bash ${MY_USERNAME}
+passwd ${MY_USERNAME}
+
 echo "alias ls='ls --color=auto'"  >> /home/oreststetsiak/.bashrc
 echo "alias ll='ls -alF'" >> /home/oreststetsiak/.bashrc
 echo "alias grep='grep --color=auto'" >> /home/oreststetsiak/.bashrc
@@ -11,7 +18,7 @@ echo "oreststetsiak ALL=(ALL) ALL" >> /etc/sudoers
 pacman -S xorg-server xorg-server-utils xorg-xinit --noconfirm
 pacman -S xf86-video-intel --noconfirm
 pacman -S gdm --noconfirm
-pacman -S cinnamon nemo-fileroller --noconfirm
+pacman -S xfce4 xfce4-goodies --noconfirm
 
 systemctl enable gdm
 
@@ -29,7 +36,6 @@ dialog \
 faience-icon-theme \
 ffmpeg \
 firefox \
-firefox \
 gnome-screenshot \
 htop \
 ifplugd \
@@ -44,7 +50,6 @@ numix-gtk-theme \
 openssh \
 openvpn \
 parcellite \
-qterminal \
 rdesktop \
 thunderbird \
 tree \
@@ -54,5 +59,4 @@ wget \
 wpa_actiond \
 wpa_supplicant \
 xf86-input-synaptics \
-xfce4-appfinder \
 --noconfirm
