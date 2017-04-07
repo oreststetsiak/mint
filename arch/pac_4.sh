@@ -18,7 +18,9 @@ echo "oreststetsiak ALL=(ALL) ALL" >> /etc/sudoers
 pacman -S xorg-server xorg-server-utils xorg-xinit --noconfirm
 pacman -S xf86-video-intel --noconfirm
 pacman -S gdm --noconfirm
-pacman -S xfce4 xfce4-goodies --noconfirm
+
+pacman -S cinnamon nemo-fileroller --noconfirm
+#pacman -S xfce4 xfce4-goodies --noconfirm
 
 systemctl enable gdm
 
