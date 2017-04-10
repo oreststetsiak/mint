@@ -46,6 +46,7 @@ libreoffice-fresh \
 meld \
 mysql-workbench \
 net-tools \
+ntfs-3g \
 network-manager-applet \
 numix-gtk-theme \
 openssh \
