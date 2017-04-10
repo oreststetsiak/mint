@@ -6,6 +6,8 @@ echo "command 'wifi-menu' in case of wifi"
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 
+cp pac_* /mnt/root/
+
 pacstrap /mnt base base-devel
 
 echo "run: arch-chroot /mnt"

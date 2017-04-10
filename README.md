@@ -1,1 +1,1 @@
-# scripts to configure linux mint after installation process
+# scripts to configure linux after installation process

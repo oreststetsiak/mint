@@ -45,6 +45,7 @@ keepassx2 \
 libreoffice-fresh \
 meld \
 mysql-workbench \
+net-tools \
 network-manager-applet \
 numix-gtk-theme \
 openssh \
