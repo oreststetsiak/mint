@@ -64,3 +64,18 @@ wpa_supplicant \
 xf86-input-synaptics \
 xfce4-whiskermenu-plugin \
 --noconfirm
+
+# setup docker
+sudo mkdir /etc/systemd/system/docker.service.d
+sudo mkdir /etc/systemd/system/docker.socket.d
+
+echo "[Service]" > /etc/systemd/system/docker.service.d/docker.conf
+echo "ExecStart=/usr/bin/docker daemon -H fd:// --bip=10.100.100.1/24" >> /etc/systemd/system/docker.service.d/docker.conf
+
+echo "[Socket]" > /etc/systemd/system/docker.socket.d/socket.conf
+echo "ListenStream=0.0.0.0:2375" >> /etc/systemd/system/docker.socket.d/socket.conf
+
+usermod -aG docker ${MY_USERNAME}
+
+sudo systemctl enable docker.service
+sudo systemctl restart docker.service
