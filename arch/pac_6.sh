@@ -16,8 +16,7 @@ pacman -S xorg-server xorg-server-utils xorg-xinit --noconfirm
 pacman -S xf86-video-intel --noconfirm
 pacman -S gdm --noconfirm
 
-pacman -S cinnamon nemo-fileroller --noconfirm
-#pacman -S xfce4 xfce4-goodies --noconfirm
+pacman -S xfce4 xfce4-goodies --noconfirm
 
 systemctl enable gdm
 
@@ -31,7 +30,9 @@ curl \
 dbus \
 deepin-image-viewer \
 deluge \
+docker \
 dialog \
+evince \
 faience-icon-theme \
 ffmpeg \
 firefox \
@@ -61,6 +62,5 @@ wget \
 wpa_actiond \
 wpa_supplicant \
 xf86-input-synaptics \
-xfce4-appfinder \
-xfce4-terminal \
+xfce4-whiskermenu-plugin \
 --noconfirm
