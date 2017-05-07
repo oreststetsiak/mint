@@ -14,11 +14,11 @@ echo "${MY_USERNAME} ALL=(ALL) ALL" >> /etc/sudoers
 
 pacman -S xorg-server xorg-server-utils xorg-xinit --noconfirm
 pacman -S xf86-video-intel --noconfirm
-pacman -S gdm --noconfirm
+pacman -S sddm --noconfirm
 
 pacman -S xfce4 xfce4-goodies --noconfirm
 
-systemctl enable gdm
+systemctl enable sddm
 
 pacman -Syu --noconfirm
 pacman -S \
@@ -63,6 +63,7 @@ wpa_actiond \
 wpa_supplicant \
 xf86-input-synaptics \
 xfce4-whiskermenu-plugin \
+xtrlock \
 --noconfirm
 
 # setup docker
