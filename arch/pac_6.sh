@@ -9,6 +9,7 @@ passwd ${MY_USERNAME}
 echo "alias ls='ls --color=auto'"  >> /home/${MY_USERNAME}/.bashrc
 echo "alias ll='ls -alF'" >> /home/${MY_USERNAME}/.bashrc
 echo "alias grep='grep --color=auto'" >> /home/${MY_USERNAME}/.bashrc
+echo "PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]\$\[\033[0m\]'" >> /home/${MY_USERNAME}/.bashrc
 
 echo "${MY_USERNAME} ALL=(ALL) ALL" >> /etc/sudoers
 
