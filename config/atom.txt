@@ -1,0 +1,27 @@
+"*":
+  "atom-json-color":
+    LightTheme: true
+  core:
+    themes: [
+      "atom-dark-ui"
+      "blackboard"
+    ]
+  editor:
+    invisibles:
+      cr: "↩"
+      eol: ""
+      space: "·"
+      tab: "⇥"
+    lineHeight: 1.45
+    normalizeIndentOnPaste: true
+    preferredLineLength: 100
+    showInvisibles: true
+    softWrap: true
+    tabLength: 2
+  ensureSingleTrailingNewline: true
+  "exception-reporting":
+    userId: "fc75f1fc-4859-49f8-9dad-d2e0752accd7"
+  welcome:
+    showOnStartup: false
+  whitespace:
+    removeTrailingWhitespace: true
