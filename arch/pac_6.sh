@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "use nmcli to configure network"
+
 echo "enter normal username"
 read  MY_USERNAME
 
@@ -31,8 +33,8 @@ curl \
 dbus \
 deepin-image-viewer \
 deluge \
-docker \
 dialog \
+docker \
 evince \
 faience-icon-theme \
 ffmpeg \
@@ -48,8 +50,8 @@ libreoffice-fresh \
 meld \
 mysql-workbench \
 net-tools \
-ntfs-3g \
 network-manager-applet \
+ntfs-3g \
 numix-gtk-theme \
 openssh \
 openvpn \
@@ -65,13 +67,15 @@ wpa_supplicant \
 xf86-input-synaptics \
 xfce4-whiskermenu-plugin \
 xtrlock \
+zip \
 --noconfirm
 
 # setup docker
-mkdir /etc/systemd/system/docker.service.d
-mkdir /etc/systemd/system/docker.socket.d
+mkdir -p /etc/systemd/system/docker.service.d
+mkdir -p /etc/systemd/system/docker.socket.d
 
 echo "[Service]" > /etc/systemd/system/docker.service.d/docker.conf
+echo "ExecStart=" >> /etc/systemd/system/docker.service.d/docker.conf
 echo "ExecStart=/usr/bin/docker daemon -H fd:// --bip=10.100.100.1/24" >> /etc/systemd/system/docker.service.d/docker.conf
 
 echo "[Socket]" > /etc/systemd/system/docker.socket.d/socket.conf
