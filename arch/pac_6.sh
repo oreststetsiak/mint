@@ -56,6 +56,7 @@ numix-gtk-theme \
 openssh \
 openvpn \
 parcellite \
+pavucontrol \
 rdesktop \
 thunderbird \
 tree \
