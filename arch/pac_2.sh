@@ -11,7 +11,7 @@ echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 
 locale-gen
 hwclock --systohc
-ln -sf /usr/share/zoneinfo/Europe/Kiev /etc/localtime
+ln -sf /usr/share/zoneinfo/Europe/Helsinki /etc/localtime
 
 pacman -Syu --noconfirm
 pacman -S \

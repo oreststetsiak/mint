@@ -17,11 +17,11 @@ echo "${MY_USERNAME} ALL=(ALL) ALL" >> /etc/sudoers
 
 pacman -S xorg-server xorg-server-utils xorg-xinit --noconfirm
 pacman -S xf86-video-intel --noconfirm
-pacman -S sddm --noconfirm
+pacman -S slim --noconfirm
 
 pacman -S xfce4 xfce4-goodies --noconfirm
 
-systemctl enable sddm
+systemctl enable slim
 
 pacman -Syu --noconfirm
 pacman -S \
@@ -48,10 +48,12 @@ ipython \
 keepassx2 \
 libreoffice-fresh \
 meld \
+mtpfs \
 mysql-workbench \
 net-tools \
 network-manager-applet \
 ntfs-3g \
+ntp \
 numix-gtk-theme \
 openssh \
 openvpn \
@@ -67,9 +69,13 @@ wpa_actiond \
 wpa_supplicant \
 xf86-input-synaptics \
 xfce4-whiskermenu-plugin \
-xtrlock \
 zip \
 --noconfirm
+
+# setup ntp
+sudo systemctl enable ntpd.service
+timedatectl set-ntp true
+sudo systemctl restart ntpd.service
 
 # setup docker
 mkdir -p /etc/systemd/system/docker.service.d
