@@ -51,7 +51,6 @@ paper-icon-theme \
 python-gpgme \
 rdesktop \
 shutter \
-skype \
 thunderbird \
 tree \
 wget \
