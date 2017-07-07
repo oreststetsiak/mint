@@ -19,12 +19,7 @@ sudo locale-gen --purge --no-archive
 
 echo -e "INFO: Installing software ..."
 
-echo -e "INFO: Removing xscreensaver"
-sudo apt-get remove -y xscreensaver \
-xscreensaver-data-extra \
-xscreensaver-gl-extra
-
-sudo apt-get install -y \
+sudo apt-get update && sudo apt-get install -y \
 sublime-text-installer \
 cherrytree \
 chromium-browser \
