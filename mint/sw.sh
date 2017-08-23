@@ -19,7 +19,10 @@ sudo locale-gen --purge --no-archive
 
 echo -e "INFO: Installing software ..."
 
-sudo apt-get update && sudo apt-get install -y \
+sudo apt-get update
+sudo apt-get install -y \
+arc-icons \
+arc-theme \
 sublime-text-installer \
 cherrytree \
 chromium-browser \
