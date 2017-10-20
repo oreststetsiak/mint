@@ -3,7 +3,7 @@
 echo -e "INFO: Adding PPAs"
 
 # PPAs
-sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+sudo add-apt-repository -y ppa:slgobinath/safeeyes
 sudo add-apt-repository -y ppa:vincent-c/cherrytree
 sudo add-apt-repository -y ppa:numix/ppa
 sudo add-apt-repository -y ppa:noobslab/themes
@@ -23,7 +23,8 @@ sudo apt-get update
 sudo apt-get install -y \
 arc-icons \
 arc-theme \
-sublime-text-installer \
+safeeyes \
+sublime-text \
 cherrytree \
 chromium-browser \
 clipit \
