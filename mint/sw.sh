@@ -4,15 +4,11 @@ echo -e "INFO: Adding PPAs"
 
 # PPAs
 sudo add-apt-repository -y ppa:slgobinath/safeeyes
-sudo add-apt-repository -y ppa:vincent-c/cherrytree
 sudo add-apt-repository -y ppa:numix/ppa
 sudo add-apt-repository -y ppa:noobslab/themes
 sudo add-apt-repository -y ppa:noobslab/icons
 sudo add-apt-repository -y ppa:numix/ppa
 sudo add-apt-repository -y ppa:snwh/pulp
-sudo add-apt-repository -y ppa:eugenesan/ppa
-
-sleep 3
 
 echo -e "INFO: Fixing supporting for locale en_us utf8"
 sudo locale-gen --purge --no-archive
@@ -24,9 +20,9 @@ sudo apt-get install -y \
 arc-icons \
 arc-theme \
 safeeyes \
+skypeforlinux \
 sublime-text \
 cherrytree \
-chromium-browser \
 clipit \
 curl \
 dropbox \
@@ -60,6 +56,7 @@ wireshark
 rm -rf ~/.bashrc
 cp .bashrc ~/
 
+cp -rf .themes ~/.themes
 
 echo -e "INFO: Configuring terminal!"
 ls ~/.config/xfce4/terminal
