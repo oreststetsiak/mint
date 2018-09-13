@@ -20,12 +20,9 @@ sudo apt-get install -y \
 arc-icons \
 arc-theme \
 safeeyes \
-skypeforlinux \
-sublime-text \
 cherrytree \
 clipit \
 curl \
-dropbox \
 faience-icon-theme \
 firefox \
 gitg \
