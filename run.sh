@@ -47,3 +47,14 @@ git clone https://github.com/chriskempson/base16-xfce4-terminal
 cd base16-xfce4-terminal
 ./convert2themes
 sudo cp themes/*.theme /usr/share/xfce4/terminal/colorschemes/
+
+mkdir -p ~/.config/sublime-text-3/Installed\ Packages/
+cd ~/.config/sublime-text-3/Installed\ Packages/
+wget https://packagecontrol.io/Package%20Control.sublime-package
+
+cd -
+mkdir -p ~/.config/sublime-text-3/Packages/User/
+cat sl_usr.conf > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+cat sl_pkgs.conf > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
+
+
