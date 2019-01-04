@@ -1,3 +1,17 @@
+set nu                              " enable left numbers
+set rnu
+set fillchars=vert:\                " disable vert div chars
+set cursorline                      " highlight the cursor screen line "
+set cursorcolumn                    " highlight the cursor screen line "
+set scrolloff=5 " minimal number of screen lines to keep above and below the cursor "
+set spell spelllang=en_us           " spellchecker
+set lazyredraw                      " lazyredraw
+
+" Auto indentation
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
 "---------------- Plugins -------------------
 call plug#begin('~/.vim/plugged')
 
@@ -15,12 +29,6 @@ call plug#begin('~/.vim/plugged')
 
   " Using a non-master branch
   Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-
-  " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
-  Plug 'fatih/vim-go', { 'tag': '*' }
-
-  " Plugin options
-  Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
   " Plugin outside ~/.vim/plugged with post-update hook
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -86,3 +94,34 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+
+
+" easymotion
+let g:EasyMotion_smartcase = 1
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map N <Plug>(easymotion-prev)
+
+
+" set airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dark'
+set laststatus=2
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
+
+map <C-n> :NERDTreeToggle<CR>
+
+" molokai & colors/italic/background
+set t_Co=256
+let g:molokai_original = 1
+let g:rehash256 = 1
+colo molokai
+hi Normal ctermfg=252 ctermbg=none
+hi Comment cterm=italic
