@@ -57,4 +57,16 @@ mkdir -p ~/.config/sublime-text-3/Packages/User/
 cat sl_usr.conf > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 cat sl_pkgs.conf > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
 
+sudo apt-get install silversearcher-ag #install ag
+
+# neovim
+sudo apt-get install neovim
+
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+[ -d ~/.config/nvim/ ] || mkdir ~/.config/nvim/
+cp init.vim ~/.config/nvim/init.vim
+
+nvim +PlugInstall +qall
 
