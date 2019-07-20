@@ -8,7 +8,7 @@ sudo add-apt-repository -y ppa:numix/ppa
 sudo add-apt-repository -y ppa:noobslab/themes
 sudo add-apt-repository -y ppa:noobslab/icons
 sudo add-apt-repository -y ppa:numix/ppa
-sudo add-apt-repository -y ppa:snwh/pulp
+sudo add-apt-repository -y pppa:snwh/ppa
 
 echo -e "INFO: Installing software ..."
 
@@ -23,6 +23,7 @@ faience-icon-theme \
 git \
 tig \
 gitg \
+guake \
 htop \
 inkscape \
 ipython \
@@ -33,10 +34,9 @@ numix-gtk-theme \
 numix-icon-theme-circle \
 openssh-server \
 paper-icon-theme \
+sublime-text \
 shutter \
-tree \
-wireshark
-
+tree
 
 cp -rf .themes ~/.themes
 
@@ -48,25 +48,23 @@ cd base16-xfce4-terminal
 ./convert2themes
 sudo cp themes/*.theme /usr/share/xfce4/terminal/colorschemes/
 
-mkdir -p ~/.config/sublime-text-3/Installed\ Packages/
-cd ~/.config/sublime-text-3/Installed\ Packages/
-wget https://packagecontrol.io/Package%20Control.sublime-package
+#mkdir -p ~/.config/sublime-text-3/Installed\ Packages/
+#cd ~/.config/sublime-text-3/Installed\ Packages/
+#wget https://packagecontrol.io/Package%20Control.sublime-package
 
-cd -
-mkdir -p ~/.config/sublime-text-3/Packages/User/
-cat sl_usr.conf > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-cat sl_pkgs.conf > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
+#cd -
+#mkdir -p ~/.config/sublime-text-3/Packages/User/
+#cat sl_usr.conf > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+#cat sl_pkgs.conf > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
 
-sudo apt-get install silversearcher-ag #install ag
+#sudo apt-get install silversearcher-ag #install ag
 
-# neovim
-sudo apt-get install neovim
+#sudo apt-get install neovim
 
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-[ -d ~/.config/nvim/ ] || mkdir ~/.config/nvim/
-cp init.vim ~/.config/nvim/init.vim
+#[ -d ~/.config/nvim/ ] || mkdir ~/.config/nvim/
+#cp init.vim ~/.config/nvim/init.vim
 
-nvim +PlugInstall +qall
-
+#nvim +PlugInstall +qall
