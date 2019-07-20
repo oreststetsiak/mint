@@ -8,7 +8,7 @@ sudo add-apt-repository -y ppa:numix/ppa
 sudo add-apt-repository -y ppa:noobslab/themes
 sudo add-apt-repository -y ppa:noobslab/icons
 sudo add-apt-repository -y ppa:numix/ppa
-sudo add-apt-repository -y pppa:snwh/ppa
+sudo add-apt-repository -y ppa:snwh/ppa
 
 echo -e "INFO: Installing software ..."
 
