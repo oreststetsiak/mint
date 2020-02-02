@@ -14,14 +14,12 @@ echo -e "INFO: Installing software ..."
 
 sudo apt-get update
 sudo apt-get install -y \
-silversearcher-ag \
 arc-icons \
 arc-theme \
-safeeyes \
 clipit \
 faience-icon-theme \
+flameshot \
 git \
-tig \
 gitg \
 guake \
 htop \
@@ -34,8 +32,10 @@ numix-gtk-theme \
 numix-icon-theme-circle \
 openssh-server \
 paper-icon-theme \
+safeeyes \
+silversearcher-ag \
 sublime-text \
-shutter \
+tig \
 tree
 
 cp -rf .themes ~/.themes
