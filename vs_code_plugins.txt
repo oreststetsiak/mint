@@ -1,0 +1,14 @@
+ext install ms-python.python
+ext install VisualStudioExptTeam.vscodeintellicode
+ext install CoenraadS.bracket-pair-colorizer
+ext install yzhang.markdown-all-in-one
+ext install ms-azuretools.vscode-docker
+ext install streetsidesoftware.code-spell-checker
+ext install eamodio.gitlens
+ext install donjayamanne.githistory
+ext install esbenp.prettier-vscode
+ext install FallenMax.mithril-emmet
+ext install pnp.polacode
+ext install 4ops.terraform
+ext install ms-kubernetes-tools.vscode-kubernetes-tools
+ext install redhat.vscode-yaml
