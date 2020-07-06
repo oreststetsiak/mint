@@ -4,37 +4,23 @@ echo -e "INFO: Adding PPAs"
 
 # PPAs
 sudo add-apt-repository -y ppa:slgobinath/safeeyes
-sudo add-apt-repository -y ppa:numix/ppa
-sudo add-apt-repository -y ppa:noobslab/themes
-sudo add-apt-repository -y ppa:noobslab/icons
-sudo add-apt-repository -y ppa:numix/ppa
-sudo add-apt-repository -y ppa:snwh/ppa
 
 echo -e "INFO: Installing software ..."
 
 sudo apt-get update
 sudo apt-get install -y \
-arc-icons \
-arc-theme \
 clipit \
-faience-icon-theme \
 flameshot \
 git \
 gitg \
-guake \
 htop \
 inkscape \
-ipython \
-keepassx \
-libreoffice \
 meld \
-numix-gtk-theme \
-numix-icon-theme-circle \
 openssh-server \
-paper-icon-theme \
 safeeyes \
 silversearcher-ag \
 sublime-text \
+terminator \
 tig \
 tree
 
@@ -47,24 +33,29 @@ git clone https://github.com/chriskempson/base16-xfce4-terminal
 cd base16-xfce4-terminal
 ./convert2themes
 sudo cp themes/*.theme /usr/share/xfce4/terminal/colorschemes/
+rm -rf ~/coding/base16-xfce4-terminal
 
-#mkdir -p ~/.config/sublime-text-3/Installed\ Packages/
-#cd ~/.config/sublime-text-3/Installed\ Packages/
-#wget https://packagecontrol.io/Package%20Control.sublime-package
+# install sublime
+mkdir -p ~/.config/sublime-text-3/Installed\ Packages/
+cd ~/.config/sublime-text-3/Installed\ Packages/
+wget https://packagecontrol.io/Package%20Control.sublime-package
 
-#cd -
-#mkdir -p ~/.config/sublime-text-3/Packages/User/
-#cat sl_usr.conf > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
-#cat sl_pkgs.conf > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
+cd -
+mkdir -p ~/.config/sublime-text-3/Packages/User/
+cat sl_usr.conf > ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
+cat sl_pkgs.conf > ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
 
-#sudo apt-get install silversearcher-ag #install ag
 
-#sudo apt-get install neovim
+# install neovim
 
-#curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-#    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+sudo apt-get install neovim
 
-#[ -d ~/.config/nvim/ ] || mkdir ~/.config/nvim/
-#cp init.vim ~/.config/nvim/init.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-#nvim +PlugInstall +qall
+[ -d ~/.config/nvim/ ] || mkdir ~/.config/nvim/
+cp init.vim ~/.config/nvim/init.vim
+
+nvim +PlugInstall +qall
+
+cp terminator_conf.txt ~/.config/terminator/config
