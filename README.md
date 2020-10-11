@@ -50,12 +50,6 @@ ext install ms-kubernetes-tools.vscode-kubernetes-tools
 ext install redhat.vscode-yaml
 ```
 
-## terminator config
-
-```
-cat terminator.conf > ~/.config/terminator/config
-```
-
 ## install neovim
 
 ```
@@ -70,8 +64,7 @@ cp init.vim ~/.config/nvim/init.vim
 nvim +PlugInstall +qall
 ```
 
-
-## install terminal themes
+## configure terminal
 
 ```
 cd ~/coding/
@@ -80,6 +73,16 @@ cd base16-xfce4-terminal
 ./convert2themes
 sudo cp themes/*.theme /usr/share/xfce4/terminal/colorschemes/
 rm -rf ~/coding/base16-xfce4-terminal
+```
+
+```
+cat terminalrc.conf ~/.config/xfce4/terminal/terminalrc
+```
+
+## terminator config
+
+```
+cat terminator.conf > ~/.config/terminator/config
 ```
 
 ## k8s stuff
