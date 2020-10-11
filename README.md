@@ -1,4 +1,4 @@
-# base config for linux mint workstation
+# my workstation configuration
 
 ## install packages
 ```
