@@ -68,8 +68,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 cp init.vim ~/.config/nvim/init.vim
 
 nvim +PlugInstall +qall
-
-cp terminator_conf.txt ~/.config/terminator/config
 ```
 
 
