@@ -34,20 +34,21 @@ echo "PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\03
 press **Ctrl+Shift+X**
 
 ```
-ext install ms-python.python
-ext install VisualStudioExptTeam.vscodeintellicode
+ext install 4ops.terraform
 ext install CoenraadS.bracket-pair-colorizer
-ext install yzhang.markdown-all-in-one
-ext install ms-azuretools.vscode-docker
-ext install streetsidesoftware.code-spell-checker
-ext install eamodio.gitlens
 ext install donjayamanne.githistory
+ext install eamodio.gitlens
 ext install esbenp.prettier-vscode
 ext install FallenMax.mithril-emmet
-ext install pnp.polacode
-ext install 4ops.terraform
+ext install ms-azuretools.vscode-docker
 ext install ms-kubernetes-tools.vscode-kubernetes-tools
+ext install ms-python.python
+ext install pnp.polacode
 ext install redhat.vscode-yaml
+ext install streetsidesoftware.code-spell-checker
+ext install VisualStudioExptTeam.vscodeintellicode
+ext install wholroyd.HCL
+ext install yzhang.markdown-all-in-one
 ```
 
 ## install neovim
