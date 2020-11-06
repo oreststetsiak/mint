@@ -40,9 +40,11 @@ ext install donjayamanne.githistory
 ext install eamodio.gitlens
 ext install esbenp.prettier-vscode
 ext install FallenMax.mithril-emmet
+ext install GitLab.gitlab-workflow
 ext install ms-azuretools.vscode-docker
 ext install ms-kubernetes-tools.vscode-kubernetes-tools
 ext install ms-python.python
+ext install ms-vscode-remote.remote-ssh
 ext install pnp.polacode
 ext install redhat.vscode-yaml
 ext install streetsidesoftware.code-spell-checker
