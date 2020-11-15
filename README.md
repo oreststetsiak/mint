@@ -13,6 +13,7 @@ gitg \
 htop \
 safeeyes \
 silversearcher-ag \
+sublime-text \
 terminator \
 tig \
 tree
@@ -23,35 +24,23 @@ echo "PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\03
 ```
 
 
-## vs code 
+## sublime
 
-### install vs code
-[code doc](https://code.visualstudio.com/docs/setup/linux)
-
-
-### plugins install
-
-press **Ctrl+Shift+X**
+### configuration:
+1 install package manager
+2 install sync 
+3 configure with:
+```
+{
+    "gist_id": "80ddbbd5c2a5e67670d4bb15a289fffb"
+}
 
 ```
-ext install 4ops.terraform
-ext install CoenraadS.bracket-pair-colorizer
-ext install donjayamanne.githistory
-ext install eamodio.gitlens
-ext install esbenp.prettier-vscode
-ext install FallenMax.mithril-emmet
-ext install GitLab.gitlab-workflow
-ext install ms-azuretools.vscode-docker
-ext install ms-kubernetes-tools.vscode-kubernetes-tools
-ext install ms-python.python
-ext install ms-vscode-remote.remote-ssh
-ext install pnp.polacode
-ext install redhat.vscode-yaml
-ext install streetsidesoftware.code-spell-checker
-ext install VisualStudioExptTeam.vscodeintellicode
-ext install wholroyd.HCL
-ext install yzhang.markdown-all-in-one
+4 install plugins
 ```
+crtl+P --> Sync Settings: Download
+```
+
 
 ## install neovim
 
