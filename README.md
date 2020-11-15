@@ -27,16 +27,19 @@ echo "PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\03
 ## sublime
 
 ### configuration:
-1 install package manager
-2 install sync 
-3 configure with:
+```
+crtl+shift+P --> Install Package Control
+crtl+P --> Package Control: Install Package --> Sync Settings
+crtl+P --> Sync Settings: Edit User Settings
+```
+and put this:
 ```
 {
     "gist_id": "80ddbbd5c2a5e67670d4bb15a289fffb"
 }
 
 ```
-4 install plugins
+install plugins:
 ```
 crtl+P --> Sync Settings: Download
 ```
