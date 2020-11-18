@@ -74,6 +74,10 @@ rm -rf ~/coding/base16-xfce4-terminal
 cat terminalrc.conf ~/.config/xfce4/terminal/terminalrc
 ```
 
+```
+git config --global core.editor "subl -n -w"
+```
+
 ## terminator config
 
 ```
