@@ -1,0 +1,11 @@
+[user]
+  name = Orest Stetsiak
+  email = orest.stetsiak@gmail.com
+[core]
+  editor = subl -n -w
+[diff]
+  tool = meld
+[difftool]
+  prompt = false
+[difftool "meld"]
+  cmd = meld "$REMOTE" "$LOCAL"
