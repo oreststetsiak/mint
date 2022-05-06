@@ -2,28 +2,26 @@
 
 ## install packages
 ```
-sudo add-apt-repository -y ppa:slgobinath/safeeyes
-
 sudo apt-get update
 sudo apt-get install -y \
-clipit \
+gpaste \
 flameshot \
+curl \
 git \
 gitg \
 htop \
 safeeyes \
 silversearcher-ag \
-sublime-text \
+meld \
 terminator \
 tig \
 tree
-
-cp -rf .themes ~/.themes
-
-echo "PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]$\[\033[0m\]'" >> ~/.bashrc
 ```
 
 
+```
+echo "PS1='\[\033[1;36m\]\u\[\033[1;31m\]@\[\033[1;32m\]\h:\[\033[1;35m\]\w\[\033[1;31m\]$\[\033[0m\]'" >> ~/.bashrc
+```
 
 ## gitconfig
 
@@ -32,6 +30,13 @@ cp .gitconfig ~/.gitconfig
 ```
 
 ## sublime
+```
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install -y apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+```
 
 ### configuration:
 ```
@@ -55,7 +60,7 @@ crtl+P --> Sync Settings: Download
 ## install neovim
 
 ```
-sudo apt-get install neovim
+sudo apt-get install -y neovim
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -66,30 +71,17 @@ cp init.vim ~/.config/nvim/init.vim
 nvim +PlugInstall +qall
 ```
 
-## configure terminal
-
-```
-cd ~/coding/
-git clone https://github.com/chriskempson/base16-xfce4-terminal
-cd base16-xfce4-terminal
-./convert2themes
-sudo cp themes/*.theme /usr/share/xfce4/terminal/colorschemes/
-rm -rf ~/coding/base16-xfce4-terminal
-```
-
-```
-cat terminalrc.conf ~/.config/xfce4/terminal/terminalrc
-```
-
-```
+## configure
 git config --global core.editor "subl -n -w"
 ```
 
 ## terminator config
 
 ```
+mkdir -p ~/.config/terminator
 cat terminator.conf > ~/.config/terminator/config
 ```
+
 
 ## k8s stuff
 
@@ -102,7 +94,30 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 
-curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/linux/amd64/aws-iam-authenticator
-chmod +x ./aws-iam-authenticator
-sudo mv aws-iam-authenticator /usr/bin/
+
+sudo apt-get update \
+    && curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 \
+    && chmod 700 get_helm.sh \
+    && sudo ./get_helm.sh \
+    && rm get_helm.sh
+
+
+sudo apt-get install -y bash-completion
+source /usr/share/bash-completion/bash_completion
+echo 'source <(kubectl completion bash)' >>~/.bashrc
+sudo bash -c "kubectl completion bash >/etc/bash_completion.d/kubectl
+sudo echo 'alias k=kubectl' >>~/.bashrc
+echo 'complete -F __start_kubectl k' >>~/.bashrc
 ```
+
+
+
+
+Dock
+https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu
+
+# google sdk
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+sudo apt-get install -y apt-transport-https ca-certificates gnupg
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+sudo apt-get update && sudo apt-get install -y google-cloud-sdk
