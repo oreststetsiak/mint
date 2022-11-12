@@ -4,7 +4,6 @@
 ```
 sudo apt-get update
 sudo apt-get install -y \
-gpaste \
 flameshot \
 curl \
 git \
@@ -31,11 +30,7 @@ cp .gitconfig ~/.gitconfig
 
 ## sublime
 ```
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install -y apt-transport-https
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-text
+sudo snap install sublime-text --classic
 ```
 
 ### configuration:
@@ -56,6 +51,12 @@ install plugins:
 crtl+P --> Sync Settings: Download
 ```
 
+
+fzf install
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
 
 ## install neovim
 
@@ -105,7 +106,7 @@ sudo apt-get update \
 sudo apt-get install -y bash-completion
 source /usr/share/bash-completion/bash_completion
 echo 'source <(kubectl completion bash)' >>~/.bashrc
-sudo bash -c "kubectl completion bash >/etc/bash_completion.d/kubectl
+sudo bash -c "kubectl completion bash >/etc/bash_completion.d/kubectl"
 sudo echo 'alias k=kubectl' >>~/.bashrc
 echo 'complete -F __start_kubectl k' >>~/.bashrc
 ```
@@ -121,3 +122,14 @@ echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.clou
 sudo apt-get install -y apt-transport-https ca-certificates gnupg
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
 sudo apt-get update && sudo apt-get install -y google-cloud-sdk
+
+
+
+docker-compose:
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64" -o /usr/bin/docker-compose
+sudo chmod +x /usr/bin/docker-compose
+
+docker-compose -v
+```
+
