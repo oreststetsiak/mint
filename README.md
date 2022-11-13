@@ -107,10 +107,6 @@ echo 'complete -F __start_kubectl k' >>~/.bashrc
 
 
 
-
-Dock
-https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu
-
 # google sdk
 ```
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
@@ -120,11 +116,12 @@ sudo apt-get update && sudo apt-get install -y google-cloud-sdk
 ```
 
 
-docker-compose:
+docker:
 ```
-sudo curl -L "https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64" -o /usr/bin/docker-compose
-sudo chmod +x /usr/bin/docker-compose
-
-docker-compose -v
+sudo apt-get remove -y docker docker-engine docker.io containerd runc
 ```
 
+Lenovo dock station
+```
+https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu
+```
