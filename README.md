@@ -51,6 +51,12 @@ install plugins:
 crtl+P --> Sync Settings: Download
 ```
 
+## configure
+
+```
+git config --global core.editor "subl -n -w"
+```
+
 
 fzf install
 ```
@@ -71,18 +77,6 @@ cp init.vim ~/.config/nvim/init.vim
 
 nvim +PlugInstall +qall
 ```
-
-## configure
-git config --global core.editor "subl -n -w"
-```
-
-## terminator config
-
-```
-mkdir -p ~/.config/terminator
-cat terminator.conf > ~/.config/terminator/config
-```
-
 
 ## k8s stuff
 

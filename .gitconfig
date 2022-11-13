@@ -1,6 +1,5 @@
 [user]
   name = Orest Stetsiak
-  email = orest.stetsiak@gmail.com
 [core]
   editor = subl -n -w
 [diff]
